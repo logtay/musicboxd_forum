@@ -11,13 +11,10 @@ const Card = ({ post }) => {
 
     return( <div className="card">
         <Link to={`/posts/${post.id}`}>
-            <img src={post.image} alt="Post Image" />
             <h2>{post.title}</h2>
-            <p>{post.body}</p>
-            <p>Author: {post.author}</p>
         </Link>
-        <button onClick={updateCount}>Upvote</button>
-        <p>Upvotes: {count}</p>
+        <p>{new Date(post.created_at).toLocaleString()}</p>
+        <p>{post.upvotes}</p>
         </div>);
 };
 export default Card;
