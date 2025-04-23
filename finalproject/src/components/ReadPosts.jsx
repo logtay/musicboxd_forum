@@ -10,7 +10,7 @@ const ReadPosts = () => {
             const { data } = await supabase
                 .from("posts")
                 .select()
-                .order("id", { ascending: true });
+                .order("created_at", { ascending: true });
 
             setPosts(data);
         };
