@@ -1,6 +1,6 @@
-import React from "react";
-import { useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { FaMusic } from 'react-icons/fa';
+import { useSearchParams } from "react-router-dom";
 
 const Header = ({ onSearch }) => {
     const [input, setInput] = useState("");
@@ -13,19 +13,37 @@ const Header = ({ onSearch }) => {
         onSearch(searchTerm);
     };
 
-    return (
-<header>
-  <div class="header-text">Musicboxd</div>
-  <div class="search-bar">
-    <input type="text" placeholder="Search" />
-    <button>Search</button>
-  </div>
-  <div class="navigation">
-    <a href="/">Home</a>
-    <a href="/create">Create Post</a>
-  </div>
-</header>
+    const handleChange = (event) => {
+        setInput(event.target.value);
+    };
 
+    useEffect(() => {
+        if (searchParams.has("search")) {
+            setInput(""); 
+        }
+    }, [searchParams]);
+
+    return (
+        <header>
+            <div className="header-text">
+                Musicboxd <FaMusic />
+            </div>
+            <div className="search-bar">
+                <input
+                    type="text"
+                    placeholder="Search"
+                    name="searchTerm"
+                    value={input}
+                    onChange={handleChange}
+                />
+                <button onClick={handleSearch}>Search</button>
+            </div>
+            <div className="navigation">
+                <a href="/">Home</a>
+                <a href="/create">Create Post</a>
+            </div>
+        </header>
     );
 };
+
 export default Header;

@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { supabase } from "../client.js";
 import { FaThumbsUp, FaTrash, FaEdit } from 'react-icons/fa'; 
+import { formatDistanceToNow } from 'date-fns';
 
 const PostDetail = () => {
   const [post, setPost] = useState(null);
@@ -66,9 +67,9 @@ const addComment = async (event) => {
   return (
     <div className="post-detail">
       <h1>{post.title}</h1>
-      <p>Date Posted: {new Date(post.created_at).toLocaleString()}</p>
+      <p>Posted {formatDistanceToNow(new Date(post.created_at), { addSuffix: true })}</p>
       <p>{post.body}</p>
-      {post.image && <img src={post.image} alt="Post visual" />}
+      {post.image && <img src={post.image} />}
       <div className="post-buttons">
   <div className="left">
     <button onClick={updateCount} className="upvote-button">
