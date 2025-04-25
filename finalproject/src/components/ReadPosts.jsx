@@ -36,11 +36,11 @@ const ReadPosts = () => {
 
   return (
     <div className="read-posts">
-      <div className="sort-buttons">
-        Order by:
-        <button onClick={() => setSort("created_at")}>Newest</button>
-        <button onClick={() => setSort("upvotes")}>Most Popular</button>
-      </div>
+<div className="sort-buttons">
+  <span>Order by:</span>
+  <button onClick={() => setSort("created_at")}>Newest</button>
+  <button onClick={() => setSort("upvotes")}>Most Popular</button>
+</div>
 
       {filteredPosts.map((post) => (
         <Card key={post.id} post={post} />
