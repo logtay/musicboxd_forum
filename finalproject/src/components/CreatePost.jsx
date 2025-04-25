@@ -27,17 +27,11 @@ const CreatePost = () => {
 
         return (<div className="create-post">
             <form>
-                <label for="title">Title</label>
-                <input type="text" id="title" name="title"  onChange={handleChange} required />
+                <input type="text" id="title" name="title"  onChange={handleChange} required placeholder='Title' />
                 
-                <label for="author">Author</label>
-                <input type="text" id="author" name="author" onChange={handleChange} />
+                <textarea id="body" name="body" onChange={handleChange} placeholder='Content (Optional)'></textarea>
                 
-                <label for="body">Body</label>
-                <textarea id="body" name="body" onChange={handleChange}></textarea>
-                
-                <label for="image">Image URL</label>
-                <input type="text" id="image" name="image" onChange={handleChange} />
+                <input type="text" id="image" name="image" onChange={handleChange} placeholder='Image URL (Optional)' />
                 
                 <button type="submit" value="Submit" onClick={createPost}>Create Post</button>
             </form>

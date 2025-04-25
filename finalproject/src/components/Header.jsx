@@ -14,21 +14,18 @@ const Header = ({ onSearch }) => {
     };
 
     return (
-        <header>
-            <div className="navigation">
-                <Link to="/">Home</Link>
-                <Link to="/create">Create Post</Link>
-            </div>
-            <form className="search-bar" onSubmit={handleSearch}>
-                <input
-                    type="text"
-                    placeholder="Search..."
-                    value={input}
-                    onChange={(event) => setInput(event.target.value)}
-                />
-                <button type="submit">Search</button>
-            </form>
-        </header>
+<header>
+  <div class="header-text">Musicboxd</div>
+  <div class="search-bar">
+    <input type="text" placeholder="Search" />
+    <button>Search</button>
+  </div>
+  <div class="navigation">
+    <a href="/">Home</a>
+    <a href="/create">Create Post</a>
+  </div>
+</header>
+
     );
 };
 export default Header;
