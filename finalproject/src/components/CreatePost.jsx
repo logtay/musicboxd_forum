@@ -30,7 +30,6 @@ const CreatePost = () => {
                 <h1>Create Post</h1>
                 <form>
                     <div className="form-group">
-                        <label htmlFor="title">Title<span style={{color: 'red'}}>*</span></label>
                         <input
                             type="text"
                             id="title"
@@ -42,7 +41,6 @@ const CreatePost = () => {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="body">Content</label>
                         <textarea
                             id="body"
                             name="body"
@@ -52,7 +50,7 @@ const CreatePost = () => {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="image">Image URL</label>
+                       
                         <input
                             type="text"
                             id="image"
