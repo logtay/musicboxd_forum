@@ -278,3 +278,19 @@ header {
 .posted-text{
   font-style: italic;
 }
+.flair-dropdown {
+  margin-bottom: 1rem;
+  max-width: 200px; 
+}
+
+.flair-dropdown select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+

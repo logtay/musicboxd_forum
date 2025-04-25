@@ -49,8 +49,8 @@ const CreatePost = () => {
                     onChange={handleChange}
                     placeholder="Image URL (Optional)"
                 />
-                <div className='form-group'>
-                    <label htmlFor="flair">Flair: </label>
+                <div className='flair-dropdown'>
+                    <label>Select Flair (Optional): </label>
                     <select name="flair" id="flair" onChange={handleChange}>
                         {flairs.map((flair) => (
                             <option key={flair} value={flair}>
