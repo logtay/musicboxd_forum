@@ -25,18 +25,49 @@ const CreatePost = () => {
         })
     }
 
-        return (<div className="create-post">
-            <form>
-                <input type="text" id="title" name="title"  onChange={handleChange} required placeholder='Title' />
-                
-                <textarea id="body" name="body" onChange={handleChange} placeholder='Content (Optional)'></textarea>
-                
-                <input type="text" id="image" name="image" onChange={handleChange} placeholder='Image URL (Optional)' />
-                
-                <button type="submit" value="Submit" onClick={createPost}>Create Post</button>
-            </form>
-        </div>
-        )
+        return (
+            <div className="create-post">
+                <h1>Create Post</h1>
+                <form>
+                    <div className="form-group">
+                        <label htmlFor="title">Title<span style={{color: 'red'}}>*</span></label>
+                        <input
+                            type="text"
+                            id="title"
+                            name="title"
+                            onChange={handleChange}
+                            required
+                            placeholder="Title"
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="body">Content</label>
+                        <textarea
+                            id="body"
+                            name="body"
+                            onChange={handleChange}
+                            placeholder="Content (Optional)"
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="image">Image URL</label>
+                        <input
+                            type="text"
+                            id="image"
+                            name="image"
+                            onChange={handleChange}
+                            placeholder="Image URL (Optional)"
+                        />
+                    </div>
+
+                    <button type="submit" onClick={createPost}>
+                        Create Post
+                    </button>
+                </form>
+            </div>
+        );
     }
 
 export default CreatePost;

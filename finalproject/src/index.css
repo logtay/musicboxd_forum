@@ -23,11 +23,17 @@ a:hover {
   background-color: #1a1a1a;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  padding: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 2rem;;
   max-width: 700px;
   margin: 2rem auto;
   color: #f0f0f0;
   border: 1px solid #cccccc4c;
+}
+.create-post textarea,
+.edit-post textarea {
+  height: 150px;
 }
 
  .card {
@@ -94,6 +100,7 @@ img {
 }
 
 .comments form input {
+  width: auto;;
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #444;
@@ -208,6 +215,7 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 1rem 0;
+  width: 100%;
 }
 
 .left {

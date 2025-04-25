@@ -29,9 +29,9 @@ const ReadPosts = () => {
     return 0;
   });
 
-  const search = searchParams.get("search") || "";  // Default to an empty string if search is null or undefined
+  const search = searchParams.get("search") || "";  
   const filteredPosts = sortPosts.filter((post) => {
-    return post.title.toLowerCase().includes(search.toLowerCase()); // Now it's safe to use toLowerCase
+    return post.title.toLowerCase().includes(search.toLowerCase()); 
   });
 
   return (
