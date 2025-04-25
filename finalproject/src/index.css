@@ -265,3 +265,16 @@ header {
   margin-top: 2rem;;
   font-size: 1.2rem;
 }
+.flair {
+    font-weight: bold;
+    color: #0077cc;
+    background-color: #3a3a3a;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.flair:empty {
+  display: none;
+}
+.posted-text{
+  font-style: italic;
+}

@@ -9,7 +9,7 @@ const Card = ({ post }) => {
       <Link to={`/post/${post.id}`}>
         <h2>{post.title}</h2>
       </Link>
-      <p>Posted {formatDistanceToNow(new Date(post.created_at), { addSuffix: true })}</p>
+      <p><div className="posted-text">Posted {formatDistanceToNow(new Date(post.created_at), { addSuffix: true })}</div></p>
       <p>
         <FaThumbsUp /> {post.upvotes}
       </p>

@@ -3,8 +3,9 @@ import { useParams } from "react-router-dom";
 import { supabase } from "../client.js";
 
 const EditPost = () => {
-    const [post, setPost] = useState({ title: "", body: "", image: "" });
+    const [post, setPost] = useState({ title: "", body: "", image: "", flair: "None" });
     const { id } = useParams();
+    const flairs = ["None", "Review", "Experience", "News", "Discussion", "Hot Take"];
 
     useEffect(() => {
         const fetchPost = async () => {
@@ -27,7 +28,7 @@ const EditPost = () => {
                 title: post.title,
                 body: post.body,
                 image: post.image,
-                author: post.author,
+                flair: post.flair, 
             })
             .eq("id", id)
             .select();
@@ -35,12 +36,11 @@ const EditPost = () => {
         window.location = `/post/${id}`;
     };
 
-
     const handleChange = (event) => {
         const { name, value } = event.target;
         setPost((prev) => ({
             ...prev,
-            [name]: value,
+            [name]: value, 
         }));
     };
 
@@ -69,9 +69,25 @@ const EditPost = () => {
                     onChange={handleChange}
                     placeholder="Image URL"
                 />
+
+                <div className="form-group">
+                    <label htmlFor="flair">Flair: </label>
+                    <select
+                        name="flair"
+                        id="flair"
+                        value={post.flair} 
+                        onChange={handleChange}
+                    >
+                        {flairs.map((flair) => (
+                            <option key={flair} value={flair}>
+                                {flair}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+
                 <button type="submit">Update Post</button>
             </form>
-            
         </div>
     );
 };

@@ -67,7 +67,14 @@ const addComment = async (event) => {
   return (
     <div className="post-detail">
       <h1>{post.title}</h1>
-      <p>Posted {formatDistanceToNow(new Date(post.created_at), { addSuffix: true })}</p>
+     {post.flair !== "None" && (
+  <p>
+    <span className="flair">{post.flair}</span>
+  </p>
+)}
+
+
+      <p><div className="posted-text">Posted {formatDistanceToNow(new Date(post.created_at), { addSuffix: true })}</div></p>
       <p>{post.body}</p>
       {post.image && <img src={post.image} />}
       <div className="post-buttons">

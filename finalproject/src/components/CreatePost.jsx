@@ -3,13 +3,14 @@ import { supabase } from '../client.js';
 
 const CreatePost = () => {
     const [post, setPost] = useState({ title: "", body: "", image: "" });
+    const flairs = ["None", "Review", "Experience", "News", "Discussion", "Hot Take"];
 
     const createPost = async (event) => {
         event.preventDefault();
 
         await supabase
             .from('posts')
-            .insert({ title: post.title, body: post.body, image: post.image })
+            .insert({ title: post.title, body: post.body, image: post.image, flair: post.flair === "None" ? "" : post.flair})
             .select();
 
         window.location = "/";
@@ -25,7 +26,7 @@ const CreatePost = () => {
 
     return (
         <div className="create-post">
-            <h1>Create Post</h1>
+            <h1>Edit Post</h1>
             <form onSubmit={createPost}>
                 <input
                     type="text"
@@ -48,6 +49,16 @@ const CreatePost = () => {
                     onChange={handleChange}
                     placeholder="Image URL (Optional)"
                 />
+                <div className='form-group'>
+                    <label htmlFor="flair">Flair: </label>
+                    <select name="flair" id="flair" onChange={handleChange}>
+                        {flairs.map((flair) => (
+                            <option key={flair} value={flair}>
+                                {flair}
+                            </option>
+                        ))}
+                    </select>
+                </div>
                 <button type="submit">Create Post</button>
             </form>
         </div>
