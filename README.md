@@ -4,7 +4,7 @@ Submitted by: **Taylor Femat**
 
 This web app: **Musicboxd is a Letterboxd style application. It is focused on discussion surrounding various areas of music including reviews, general discussion, hot takes, and concert-going experiences. Users are able to make their own posts (with the option to add an image or flair), comment on others, and upvote posts they like. They can also edit or delete posts.**
 
-Time spent: **15** hours spent in total
+Time spent: **16** hours spent in total
 
 ## Required Features
 
@@ -69,19 +69,15 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/logtay/web102_final/blob/main/FinalProject.gif' title='Video Walkthrough' width='750' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+GIF created with [Kap](https://getkap.co/) for macOS
+
 
 ## Notes
 
-This app built well off the previous two labs, so I did not struggle too much with getting everything added to the database and displaying it. If I did have issues they were to do with minor syntax errors. Most of my difficulties with this assignment came with getting the project to deploy and also getting the project to look the way that I wanted it to. At the time of submission, I still felt there was a discrepancy between how my app looked on local host and how the deployed version looked. I also could not get it to deploy directly from GitHub and had to drop the file locally which was frustrating. I have a lot more ideas on how I'd like to expand on the work that I did here but I didn't have as much time as I would have liked for extras. 
-
+This app built well off the previous two labs, so I did not struggle too much with getting everything added to the database and displaying it. If I did have issues they were to do with minor syntax errors. Most of my difficulties with this assignment came with getting the project to deploy and also getting the project to look the way that I wanted it to. At the time of submission, I still felt there was a discrepancy between how my app looked on local host and how the deployed version looked. I also could not get it to deploy directly from GitHub and had to drop the file locally which was frustrating. I have a lot more ideas on how I'd like to expand on the work that I did here but I didn't have as much time as I would have liked for extras.
 ## License
 
     Copyright 2025 Taylor Femat
