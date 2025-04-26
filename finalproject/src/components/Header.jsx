@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { FaMusic } from 'react-icons/fa';
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useLocation, useNavigate } from "react-router-dom";
 
 const Header = ({ onSearch }) => {
     const [input, setInput] = useState("");
     const [searchParams, setSearchParams] = useSearchParams();
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleSearch = (event) => {
         event.preventDefault();
         const searchTerm = input.trim();
-        setSearchParams({ search: searchTerm });
-        onSearch(searchTerm);
+
+        // Always redirect to home with the search term
+        if (searchTerm) {
+            navigate(`/?search=${encodeURIComponent(searchTerm)}`);
+            onSearch(searchTerm);
+        }
     };
 
     const handleChange = (event) => {
@@ -18,10 +24,10 @@ const Header = ({ onSearch }) => {
     };
 
     useEffect(() => {
-        if (searchParams.has("search")) {
+        if (searchParams.has("search") && location.pathname === "/") {
             setInput(""); 
         }
-    }, [searchParams]);
+    }, [searchParams, location]);
 
     return (
         <header>
