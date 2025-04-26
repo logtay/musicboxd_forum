@@ -12,8 +12,7 @@ const Header = ({ onSearch }) => {
         event.preventDefault();
         const searchTerm = input.trim();
 
-        // Always redirect to home with the search term
-        if (searchTerm) {
+        if (searchTerm) {}
             navigate(`/?search=${encodeURIComponent(searchTerm)}`);
             onSearch(searchTerm);
         }
