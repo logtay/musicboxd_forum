@@ -12,7 +12,7 @@ const Header = ({ onSearch }) => {
         event.preventDefault();
         const searchTerm = input.trim();
 
-        if (searchTerm) {}
+        if (searchTerm) {
             navigate(`/?search=${encodeURIComponent(searchTerm)}`);
             onSearch(searchTerm);
         }
@@ -49,6 +49,6 @@ const Header = ({ onSearch }) => {
             </div>
         </header>
     );
-};
+}
 
 export default Header;
