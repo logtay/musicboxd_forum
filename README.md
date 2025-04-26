@@ -80,7 +80,7 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+This app built well off the previous two labs, so I did not struggle too much with getting everything added to the database and displaying it. If I did have issues they were to do with minor syntax errors. Most of my difficulties with this assignment came with getting the project to deploy and also getting the project to look the way that I wanted it to. At the time of submission, I still felt there was a discrepancy between how my app looked on local host and how the deployed version looked. I also could not get it to deploy directly from GitHub and had to drop the file locally which was frustrating. I have a lot more ideas on how I'd like to expand on the work that I did here but I didn't have as much time as I would have liked for extras. 
 
 ## License
 
