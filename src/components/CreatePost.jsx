@@ -26,7 +26,7 @@ const CreatePost = () => {
 
     return (
         <div className="create-post">
-            <h1>Edit Post</h1>
+            <h1>Create a Post</h1>
             <form onSubmit={createPost}>
                 <input
                     type="text"
