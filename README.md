@@ -1,5 +1,8 @@
 # Project Title - Musicboxd
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Netlify-brightgreen)](https://illustrious-bienenstitch-0eaa5b.netlify.app/) [![Walkthrough](https://img.shields.io/badge/🎬%20Watch-Demo%20Video-red)](https://your-video-link)
+
 Musicboxd is a CRUD-style app for music enthusiasts. It is focused on discussion surrounding various areas of music including reviews, general discussion, hot takes, and concert-going experiences. Users are able to make their own posts (with the option to add an image or flair), comment on others, and upvote posts they like. They can also edit or delete posts. 
+
 
 ## Features
 - Create, edit and delete posts
