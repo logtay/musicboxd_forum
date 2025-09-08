@@ -1,12 +1,69 @@
-# React + Vite
+# Project Title - Musicboxd
+Musicboxd is a CRUD-style app for music enthusiasts. It is focused on discussion surrounding various areas of music including reviews, general discussion, hot takes, and concert-going experiences. Users are able to make their own posts (with the option to add an image or flair), comment on others, and upvote posts they like. They can also edit or delete posts. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- Create, edit and delete posts
+- Comment on posts
+- Upvote posts
+- Search posts by title
+- Sort posts by date or upvote count
+- Personalize your post by adding images (via direct URL) and post flairs
 
-Currently, two official plugins are available:
+## Getting Started
+### Prerequisites 
+- Node.js
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Installation
+1. Clone the repository
+```
+git clone https://github.com/logtay/musicboxd_forum.git
+cd musicboxd_forum
+```
 
-## Expanding the ESLint configuration
+2. Install dependencies
+```
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Start development server
+```
+npm run dev
+```
+
+4. View the app in your browser
+```
+http://localhost:5173
+
+```
+
+## Usage
+
+<details>
+<summary>Sample Actions</summary>
+
+- Create a Post
+  - Title your post (required)
+  - Optionally, include text, flair, or image
+    - Upload image using direct URL
+
+- Explore the Home Feed
+  - View post summaries showing title, creation time, and upvote count
+  - Sort posts by most recent or most upvoted
+
+- Interact with posts
+  - From the home feed, click a post to view its details
+  - Comment on a post
+  - Upvote a post
+  - Edit or delete a post
+
+
+- Customize Posts
+  - Add flairs to personalize your post (Experience, Hot Take, Review, etc.)
+  - Share images on your post using a direct URL
+
+
+</details>
+
+## Walkthrough
+gif or video here
+
