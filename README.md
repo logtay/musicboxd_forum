@@ -68,5 +68,5 @@ http://localhost:5173
 </details>
 
 ## Walkthrough
-gif or video here
+<img src='https://github.com/logtay/musicboxd_forum/blob/main/ForumGIF.gif?raw=true' title='CRUD Video Walkthrough' width='800' alt='CRUD Video Walkthrough' />
 
